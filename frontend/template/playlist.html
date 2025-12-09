@@ -1,275 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="portfolio, Hoàng, Kaggle, GitHub, Machine Learning, Data Analyst">
-    <title>Document</title>
-    <link rel="shortcut icon" href="../icon/portfolio.png" type="image/x-icon">
+    <title>Playlist âm nhạc | Hoàng Bùi</title>
     <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
     <script src="../lib/js/bootstrap.bundle.js"></script>
     <script src="../scripts/change_theme.js"></script>
-
+    <link rel="shortcut icon" href="../icon/portfolio.png" type="image/x-icon">
     <style>
-        /* Full width section với background */
-        .full-bg {
-            width: 100vw;           /* full screen width */
-            margin-right: calc(-50vw + 50%);
-            padding: 16px;
-            background-color: #fdfdfd;
-            box-sizing: border-box;
-            overflow-x: auto;       /* cho phép tràn */
-        }
+        body { overflow-x: hidden; }
+        audio { width: 100%; height: 40px; }
 
-        .menu-button-wrapper {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background-color: inherit;
+        /* ===== Hover effect cho menu offcanvas ===== */
+        .offcanvas-body .nav-link {
+            transition: 0.2s all;
+            border-radius: 6px;
+            padding: 8px 12px;
         }
-
-        /* Table responsive */
-        .table-responsive {
-            overflow-x: auto;
-        }
-
-        /* Dark mode */
-        body.dark-mode {
-            background-color: #2a2a2a;
-            color: #ddd;
-        }
-
-        body.dark-mode .full-bg {
-            background-color: #333;
-            color: #eee;
-        }
-
-        body.dark-mode table {
-            color: #eee;
-        }
-
-        body.dark-mode .table-dark {
-            background-color: #555 !important;
-            color: #fff;
-        }
-
-        body.dark-mode audio {
-            filter: brightness(0.8);
+        .offcanvas-body .nav-link:hover {
+            background-color: #e7f1ff;
+            color: #0d6efd !important;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
         }
     </style>
 </head>
 
-<body class="bg-light" class="full-bg">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4 p-2 bg-white border-end">
-                <div class="text-center" style="margin:20px;">
-                    <img src="../icon/user.png" class="img-fluid w-75" alt="User icon">
-                </div>
+<body class="bg-light">
+<div class="container-fluid">
+    <div class="row">
 
-                <!-- Thông tin cá nhân -->
-                <h1>Thông tin cá nhân</h1>
-                <table class="table table-borderless">
-                    <tr>
-                        <td>Họ và tên</td>
-                        <td><strong>Bùi Thanh Hoàng</strong></td>
-                    </tr>
-
-                    <tr>
-                        <td>Vai trò</td>
-                        <td><strong>Data Enthusiast</strong> - Yêu thích dữ liệu, đang học và thực hành</td>
-                    </tr>
-
-                    <tr>
-                        <td>Email</td>
-                        <td class="text-break">
-                            <a href="mailto:bui.thanh.hoang.13112004@gmail.com">bui.thanh.hoang.13112004@gmail.com</a>
-                        </td>
-                    </tr>
-                        
-                    <tr>
-                        <td>Outlook</td>
-                        <td class="text-break">
-                            <a href="mailto:bui.thanh.hoang.13112004@outlook.com">bui.thanh.hoang.13112004@outlook.com</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Github</td>
-                        <td><a href="https://github.com/Thomas131104">Thomas131104</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>Kaggle</td>
-                        <td><a href="https://www.kaggle.com/gottagotellperiod">Kaggle Profile</a></td>
-                    </tr>
-                    
-                </table>
-
-
-                <!-- Các icon -->
-                <div class="d-flex flex-wrap justify-content-center gap-5">
-                    <a href="#" onclick="changeTheme(); return false" data-bs-toggle="tooltip" data-bs-placement="top" title="Đổi theme">
-                        <img src="../icon/change-theme.png" class="img-fluid" style="max-width: 32px;" alt="Change Theme">
-                    </a>
-
-                    <a href="mailto:bui.thanh.hoang.13112004@gmail.com">
-                        <img src="../icon/gmail.png" class="img-fluid" style="max-width: 32px;" alt="Gmail" data-bs-toggle="tooltip" data-bs-placement="top" title="Gửi mail qua Gmail">
-                    </a>
-
-                    <a href="mailto:bui.thanh.hoang.13112004@outlook.com">
-                        <img src="../icon/outlook.png" class="img-fluid" style="max-width: 32px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Gửi mail qua Outlook">
-                    </a>
-
-                    <a href="https://github.com/Thomas131104">
-                        <img src="../icon/github.png" class="img-fluid" style="max-width: 32px;" alt="GitHub" data-bs-toggle="tooltip" data-bs-placement="top" title="Github của tôi">
-                    </a>
-
-                    <a href="https://www.kaggle.com/gottagotellperiod">
-                        <img src="../icon/kaggle.png" class="img-fluid" style="max-width: 32px;" alt="Kaggle" data-bs-toggle="tooltip" data-bs-placement="top" title="Kaggle của tôi">
-                    </a>
-
-                    <a href="https://open.spotify.com/user/31vilqqn6fh566yto2bjimtswedu">
-                        <img src="../icon/spotify.png" class="img-fluid" style="max-width: 32px;" alt="Spotify" data-bs-toggle="tooltip" data-bs-placement="top" title="Spotify của tôi">
-                    </a>
-                </div>
+        <!-- ===== Cột thông tin cá nhân cố định bên trái ===== -->
+        <div class="col-4 p-3 bg-white border-end">
+            <div class="text-center" style="margin:20px;">
+                <img src="../icon/user.png" class="img-fluid w-75" alt="User icon">
             </div>
 
+            <h1>Thông tin cá nhân</h1>
+            <table class="table table-borderless">
+                <tr><td>Họ và tên</td><td><strong>Bùi Thanh Hoàng</strong></td></tr>
+                <tr><td>Vai trò</td><td><strong>Data Enthusiast</strong> - Yêu thích dữ liệu, đang học và thực hành</td></tr>
+                <tr><td>Email</td><td class="text-break"><a href="mailto:bui.thanh.hoang.13112004@gmail.com">bui.thanh.hoang.13112004@gmail.com</a></td></tr>
+                <tr><td>Outlook</td><td class="text-break"><a href="mailto:bui.thanh.hoang.13112004@outlook.com">bui.thanh.hoang.13112004@outlook.com</a></td></tr>
+                <tr><td>Github</td><td><a href="https://github.com/Thomas131104">Thomas131104</a></td></tr>
+                <tr><td>Kaggle</td><td><a href="https://www.kaggle.com/gottagotellperiod">Kaggle Profile</a></td></tr>
+            </table>
 
-            <div class="col-8 p-4">
-                <header class="mb-4">
-                    <h1 class="text-primary">Playlist nghe nhạc</h1>
-                </header>
-
-            <!-- Main content -->
-            <main>
-
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="menuSidebar" aria-labelledby="menuSidebarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="menuSidebarLabel">Menu</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Đóng"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="nav nav-pills flex-column">
-                            <li class="nav-item"><a class="nav-link" href="../index.html">Giới thiệu</a></li>
-                            <li class="nav-item"><a class="nav-link" href="achivement.html">Thành tích & Học vấn</a></li>
-                            <li class="nav-item"><a class="nav-link" href="project.html">Dự án</a></li>
-                            <li class="nav-item"><a class="nav-link active disabled" aria-disabled="true">Playlist âm nhạc</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-
-
-                <!-- Full width playlist -->
-                <section id="classical">
-                    <!-- Menu button -->
-                    <div class="menu-button-wrapper text-end mb-3">
-                        <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuSidebar" aria-controls="menuSidebar" title="Menu">
-                            <img src="../icon/menu.png" style="width: 80%; height: 24px; border: 2px; background-color: bisque;">
-                        </button>
-                    </div>
-
-                    <h2 class="text-center mb-3">Thể loại âm nhạc cổ điển</h2>
-
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-striped table-hover">
-                            <colgroup>
-                                <col style="width: 15%;">
-                                <col style="width: 30%;">
-                                <col style="width: 30%;">
-                                <col style="width: 25%;">
-                            </colgroup>
-                            <thead class="table-dark">
-                                <tr>
-                                    <th>Tên bản nhạc</th>
-                                    <th>Nội dung</th>
-                                    <th>Ý nghĩa</th>
-                                    <th>Phát nhạc</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Harpsichord Concerto in D minor, BWV 1052 – Chương I (J.S. Bach)</td>
-                                    <td>Bản concerto mở đầu bằng các hợp âm mạnh mẽ và chủ đề đối âm tinh tế, harpsichord như lao qua dàn dây.</td>
-                                    <td>Bach thể hiện triết lý Baroque: cảm xúc ẩn sâu trong cấu trúc hoàn hảo.</td>
-                                    <td><audio controls src="../audio/classical/Bach - Harpsichord-Concerto-No.1-in-D-minor_BWV-1052 -  I.mp3"></audio></td>
-                                </tr>
-                               
-                                <tr> 
-                                    <td>Piano Sonata in B minor – Chương I (J. Haydn)</td>
-                                    <td>Chương mở đầu nhẹ nhàng, rồi bùng nổ với các chuyển cung bất ngờ và nhịp điệu tinh nghịch. Chủ đề chính và phụ liên tục đối thoại.</td> 
-                                    <td>Haydn chứng minh khả năng biến âm nhạc thành trò chơi trí tuệ.</td> 
-                                    <td><audio controls src="../audio/classical/Haydn Harpsichord_ Comparone plays Sonata in B minor, 32_ Allegro moderato.mp3" class="w-100"></audio></td> 
-                                </tr> 
-                                
-                                <tr>
-                                    <td>String Quartet Op.18 No.4 – Chương I (L. van Beethoven)</td> 
-                                    <td>Chủ đề chính dồn dập và kịch tính, các nhạc cụ đối đáp liên tục, tạo cảm giác như một cuộc tranh luận căng thẳng.</td> 
-                                    <td>Bản quartet thể hiện “mầm mống anh hùng ca” của Beethoven: đấu tranh với định mệnh, nội tâm bùng nổ.</td> 
-                                    <td><audio controls src="../audio/classical/Beethoven String Quartet Op. 18 No. 4, Mvt. 1 - Dover Quartet.mp3" class="w-100"></audio></td> 
-                                </tr> 
-                                
-                                <tr> 
-                                    <td>Piano Sonata số 3 - Chương IV (F. Chopin)</td> 
-                                    <td>Chương cuối mang hơi thở của một cuộc truy đuổi dữ dội, với các mô-típ xoắn ốc và tiến hành gấp gáp thể hiện tinh thần bất khuất.</td> 
-                                    <td>Chopin thể hiện tự do trong khuôn khổ, cảm xúc trong hình thức, một cuộc chạy đua của tâm hồn với định mệnh.</td> 
-                                    <td><audio controls src="../audio/classical/Chopin-Piano-Sonata-No-3.Op-58.mp3" class="w-100"></audio></td> 
-                                </tr> 
-                                    
-                                <tr> 
-                                    <td>Piano Prelude Op.3 No.2 (S. Rachmaninoff)</td> 
-                                    <td>Bản Prelude mở ra không gian lãng mạn rộng lớn, các hợp âm dày, giàu âm sắc và những đoạn melodia u sầu.</td> 
-                                    <td>Rachmaninoff thể hiện tâm trạng cô đơn và sâu lắng, cảm xúc mãnh liệt nhưng tinh tế.</td> 
-                                    <td><audio controls src="../audio/classical/Rachmaninoff - Prelude in C Sharp Minor (Op. 3 No. 2).mp3" class="w-100"></audio></td> 
-                                </tr> 
-                                
-                                <tr> 
-                                    <td>Symphony No.5 – Chương II (D. Shostakovich)</td> 
-                                    <td>Điệu valse méo mó, sắc sảo, những đoạn pizzicato và staccato tạo cảm giác vừa vui vừa cay đắng.</td> 
-                                    <td>Lời châm biếm kín đáo đối với xã hội Liên Xô, thể hiện nụ cười trong nước mắt.</td> 
-                                    <td><audio controls src="../audio/classical/Shostakovich_Symphony_5_Movement_2.mp3" class="w-100"></audio></td> 
-                                </tr> 
-                                
-                                <tr> 
-                                    <td>String Quartet No.8 – Chương II (D. Shostakovich)</td> 
-                                    <td>Cơn lốc cuồng nộ với hợp âm dồn dập và motif DSCH liên tục vang lên.</td> 
-                                    <td>Lời tự sự về chiến tranh và tuyệt vọng cá nhân, giọng C minor kết hợp motif tên mình tạo nên thông điệp ám ảnh.</td> 
-                                    <td><audio controls src="../audio/classical/Shostakovich_ String-Quartet-No.8_II. Allegro-molto __ EMERSO_STRING_QUARTET.mp3" class="w-100"></audio></td> 
-                                </tr> 
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                <section id="self-composing">
-                    <!-- Menu button -->
-                    <div class="menu-button-wrapper text-end mb-3">
-                        <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuSidebar" aria-controls="menuSidebar" title="Menu">
-                            <img src="../icon/menu.png" style="width: 80%; height: 24px; border: 2px; background-color: bisque;">
-                        </button>
-                    </div>
-
-                    <h2 class="text-center mb-3">Thể loại âm nhạc cổ điển</h2>
-
-                    <div>
-                        
-                    </div>
-
-                </section>
-
-                
-            </main>
-
-
-                <footer class="text-muted mt-5">
-                    <hr>
-                    <p>By Mus aka Hoàng Bùi</p>
-                </footer>
+            <div class="d-flex flex-wrap justify-content-center gap-5">
+                <a href="#" onclick="changeTheme(); return false"><img src="../icon/change-theme.png" class="img-fluid" style="max-width: 32px;"></a>
+                <a href="mailto:bui.thanh.hoang.13112004@gmail.com"><img src="../icon/gmail.png" style="max-width: 32px;"></a>
+                <a href="mailto:bui.thanh.hoang.13112004@outlook.com"><img src="../icon/outlook.png" style="max-width: 32px;"></a>
+                <a href="https://github.com/Thomas131104"><img src="../icon/github.png" style="max-width: 32px;"></a>
+                <a href="https://www.kaggle.com/gottagotellperiod"><img src="../icon/kaggle.png" style="max-width: 32px;"></a>
+                <a href="https://open.spotify.com/user/31vilqqn6fh566yto2bjimtswedu"><img src="../icon/spotify.png" style="max-width: 32px;"></a>
             </div>
         </div>
+
+        <!-- ===== Nội dung chính ===== -->
+        <div class="col-8 p-4">
+            <div class="text-end mb-3">
+                <!-- Nút mở offcanvas chỉ dùng để điều hướng các trang -->
+                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuSidebar" aria-controls="menuSidebar" title="Menu">
+                    <img src="../icon/menu.png" style="height:24px;">
+                </button>
+            </div>
+
+            <!-- Offcanvas điều hướng -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="menuSidebar" aria-labelledby="menuSidebarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="menuSidebarLabel">Điều hướng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Đóng"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item"><a class="nav-link active disabled" aria-disabled="true">Playlist âm nhạc</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Trang chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="achivement.html">Thành tích & Học vấn</a></li>
+                        <li class="nav-item"><a class="nav-link" href="project.html">Dự án</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Header -->
+            <header class="mb-4">
+                <h1 class="text-primary fw-bold">🎵 Playlist nghe nhạc</h1>
+            </header>
+
+            <main>
+               <!-- Playlist Portfolio -->
+                <section id="playlist" class="mb-5">
+
+                    <!-- ===== Nhạc cổ điển ===== -->
+                    <h3 class="mb-3">Nhạc cổ điển</h3>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <div class="col">
+                            <div class="card h-100 shadow-sm music-card">
+                                <div class="row g-0">
+                                    <div class="col-md-4 text-center p-2">
+                                        <img src="../icon/bach.jpg" class="img-fluid rounded" alt="Bach">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Bach – Harpsichord Concerto BWV 1052 (I)</h5>
+                                        <p class="card-text"><strong>Nhóm:</strong> Nhạc cổ điển</p>
+                                        <p class="card-text"><strong>Ý nghĩa:</strong> Triết lý Baroque: cảm xúc ẩn trong cấu trúc hoàn hảo.</p>
+                                        <audio controls src="../audio/classical/bach.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card h-100 shadow-sm music-card">
+                                <div class="row g-0">
+                                    <div class="col-md-4 text-center p-2">
+                                        <img src="../icon/beethoven.jpg" class="img-fluid rounded" alt="Beethoven">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Beethoven – String Quartet Op.18 No.4 (I)</h5>
+                                            <p class="card-text"><strong>Nhóm:</strong> Nhạc cổ điển</p>
+                                            <p class="card-text"><strong>Ý nghĩa:</strong> “Anh hùng ca” thời kỳ đầu, đấu tranh với định mệnh.</p>
+                                            <audio controls src="../audio/classical/beethoven.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card h-100 shadow-sm music-card">
+                                <div class="row g-0">
+                                    <div class="col-md-4 text-center p-2">
+                                        <img src="../icon/chopin.jpg" class="img-fluid rounded" alt="Chopin">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Chopin - Piano Sonata No.3 (IV)</h5>
+                                        <p class="card-text"><strong>Nhóm:</strong> Nhạc cổ điển</p>
+                                        <p class="card-text"><strong>Ý nghĩa:</strong> Tự do trong khuôn khổ – tâm hồn chạy đua với định mệnh.</p>
+                                        <audio controls src="../audio/classical/chopin.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card h-100 shadow-sm music-card">
+                                <div class="row g-0">
+                                    <div class="col-md-4 text-center p-2">
+                                        <img src="../icon/shostakovich.jpg" class="img-fluid rounded" alt="Shostakovich">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Shostakovich – Symphony No.5 (II)</h5>
+                                        <p class="card-text"><strong>Nhóm:</strong> Nhạc cổ điển</p>
+                                        <p class="card-text"><strong>Ý nghĩa:</strong> Châm biếm kín đáo xã hội Liên Xô – nụ cười trong nước mắt.</p>
+                                        <audio controls src="../audio/classical/shostakovich.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- ===== Các bản tự sáng tác ===== -->
+                    <h3 class="mt-5 mb-3">Các bản tự sáng tác</h3>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <div class="col">
+                            <div class="card h-100 shadow-sm music-card">
+                                    <div class="card-body">
+                                    <h5 class="card-title">Galop in C minor</h5>
+                                    <p class="card-text"><strong>Nhóm:</strong> Tự sáng tác</p>
+                                    <audio controls src="../audio/self-composing/galop.mp3"></audio>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card h-100 shadow-sm music-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">L'estro armonico Op.3 No.10 – Bản 2 piano</h5>
+                                    <p class="card-text"><strong>Nhóm:</strong> Tự chuyển soạn</p>
+                                    <audio controls src="../audio/self-composing/Lestro_armonico_3_10_2pianos.mp3"></audio>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card h-100 shadow-sm music-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lyric Waltz – Shostakovich (Bản piano solo)</h5>
+                                    <p class="card-text"><strong>Nhóm:</strong> Chuyển soạn / chỉnh sửa</p>
+                                    <audio controls src="../audio/self-composing/LyricWaltz.mp3"></audio>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card h-100 shadow-sm music-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Strange Waltz</h5>
+                                    <p class="card-text"><strong>Nhóm:</strong> Tự sáng tác</p>
+                                    <audio controls src="../audio/self-composing/strange-orchestra.mp3"></audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <footer class="mt-5 text-center text-muted">
+                <hr>
+                By Mus aka Hoàng Bùi
+            </footer>
+        </div>
     </div>
+</div>
 </body>
 </html>

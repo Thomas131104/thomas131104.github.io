@@ -12,45 +12,62 @@
     <script src="../scripts/change_theme.js"></script>
 
     <style>
-        /* Khối nội dung */
-        .block {
-            padding: 16px;
-            margin-bottom: 24px;
-            border-left: 4px solid #3498db;
-            background-color: #fdfdfd;
+        /* Achievement card giống DevFolio */
+        .achv-card {
+            background: var(--bs-body-bg);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--bs-border-color);
+            margin-bottom: 20px;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
         }
 
-        /* Tiêu đề chính */
-        h2 {
-            font-size: 20px;
-            margin-bottom: 8px;
-            color: #2c3e50;
+        .achv-card:hover {
+            transform: translateY(-6px);
+            border-color: #0d6efd;
+            box-shadow: 0 8px 28px rgba(13,110,253,0.25);
         }
 
-        /* Tiêu đề phụ */
-        h5 {
-            font-size: 16px;
-            margin: 12px 0 6px;
-            font-weight: 600;
-            color: #34495e;
+        .achv-title {
+            font-size: 18px;
+            font-weight: 700;
         }
 
-        /* Đoạn văn */
-        p {
-            margin: 4px 0;
+        .achv-desc {
             font-size: 14px;
-            color: #555;
+            opacity: 0.85;
+            margin-top: 8px;
+            margin-bottom: 10px;
         }
 
-        /* Link */
-        a {
-            color: #2980b9;
-            text-decoration: none;
+        .achv-tag {
+            display: inline-block;
+            background: rgba(13,110,253,0.1);
+            color: #0d6efd;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            margin-right: 6px;
         }
 
-        a:hover {
-            text-decoration: underline;
+        /* Dark mode */
+        body.dark-mode .achv-card {
+            background: #1d1f21;
+            border-color: #3a3f44;
+            box-shadow: 0 4px 12px rgba(255,255,255,0.03);
         }
+
+        body.dark-mode .achv-card:hover {
+            border-color: #66aaff;
+            box-shadow: 0 8px 28px rgba(102,170,255,0.25);
+        }
+
+        body.dark-mode .achv-tag {
+            background: rgba(102,170,255,0.15);
+            color: #82b7ff;
+        }
+
     </style>
 </head>
 
@@ -176,52 +193,61 @@
                     <!-- Nội dung chính -->
                     <section id="university" class="block">
                         <h2>Học vấn</h2>
-                        <p>Sinh viên năm cuối ngành Hệ thống thông tin tại Đại học Nông Lâm.</p>
-                        <p>GPA: <b>3.32</b>/4.0</p>
+                        <div class="achv-card">
+                            <p>Sinh viên năm cuối ngành Hệ thống thông tin tại Đại học Nông Lâm.</p>
+                            <p>GPA: <b>3.32</b>/4.0</p>
+                        </div>
                     </section>
 
-                    <hr>
-                    <h2>Thành tích</h2>
-                    <section class="block">
-                        <h5>Chứng chỉ <b>Scientific Computing with Python</b> - <b>freeCodeCamp</b></h5>
-                        <ul>
-                            <li><p>Chứng chỉ xác nhận năng lực lập trình Python và xử lý dữ liệu khoa học.</p></li>
-                        </ul>
-                        <p>Link: <a href="https://www.freecodecamp.org/certification/fccd2fa5107-c16e-4c4f-82d1-6bf1a615c22c/scientific-computing-with-python-v7">Xem chứng chỉ</a></p>
-                    </section>
+                    <section id="achivement" class="block">
+                        <h2 class="fw-bold">Thành tích</h2>
 
-                    <section class="block">
-                        <h5>Chứng chỉ hoàn thành khóa <b>Pandas</b> - <b>Kaggle Learn</b></h5>
-                        <ul>
-                            <li><p>Chứng chỉ xác nhận có thể thực hiện các thao tác tiền xử lí dữ liệu bằng thư viện Pandas</p></li>
-                        </ul>
-                        <p>Link: <a href="https://www.kaggle.com/learn/certification/gottagotellperiod/pandas">Xem chứng chỉ</a></p>
-                    </section>
+                        <!-- Achv 1 -->
+                        <div class="achv-card">
+                            <div class="achv-title">Scientific Computing with Python – freeCodeCamp</div>
+                            <span class="achv-tag">Python</span>
+                            <span class="achv-tag">Algorithms</span>
+                            <p class="achv-desc">Chứng chỉ xác nhận năng lực lập trình Python và xử lý dữ liệu khoa học.</p>
+                            <a href="https://www.freecodecamp.org/certification/fccd2fa5107-c16e-4c4f-82d1-6bf1a615c22c/scientific-computing-with-python-v7"
+                            target="_blank">Xem chứng chỉ</a>
+                        </div>
 
-                    <section class="block">
-                        <h5>Chứng chỉ hoàn thành khóa <b>Data Visualization</b> - <b>Kaggle Learn</b></h5>
-                        <ul>
-                            <li><p>Chứng chỉ xác nhận có thể tiền xử lí dữ liệu bằng thư viện Matplotlib hoặc thư viện Seaborn (nội dung tập trung vào Seaborn)</p></li>
-                        </ul>
-                        <p>Link: <a href="https://www.kaggle.com/learn/certification/gottagotellperiod/data-visualization">Xem chứng chỉ</a></p>
-                    </section>
+                        <!-- Achv 2 -->
+                        <div class="achv-card">
+                            <div class="achv-title">Pandas – Kaggle Learn</div>
+                            <span class="achv-tag">Pandas</span>
+                            <span class="achv-tag">Data Preprocessing</span>
+                            <p class="achv-desc">Nắm vững thao tác tiền xử lý dữ liệu bằng thư viện Pandas.</p>
+                            <a href="https://www.kaggle.com/learn/certification/gottagotellperiod/pandas" target="_blank">Xem chứng chỉ</a>
+                        </div>
 
-                    <section class="block">
-                        <h5>Chứng chỉ hoàn thành khóa <b>Intro to SQL</b> - <b>Kaggle Learn</b></h5>
-                        <ul>
-                            <li><p>Nắm vững các câu lệnh SQL cơ bản để truy vấn và tiền xử lí dữ liệu. Khóa học tập trung vào thao tác trực tiếp trên cơ sở dữ liệu, giúp củng cố nền tảng cho việc tích hợp với Python sau này.</p></li>
-                            <li><p>Hiện đang tiếp tục học khóa <b>Advanced SQL</b> để nâng cao khả năng phân tích và tối ưu truy vấn.</p></li>
-                        </ul>
-                        <p>Link: <a href="https://www.kaggle.com/learn/certification/gottagotellperiod/intro-to-sql">Xem chứng chỉ</a></p>
-                    </section>
+                        <!-- Achv 3 -->
+                        <div class="achv-card">
+                            <div class="achv-title">Data Visualization – Kaggle Learn</div>
+                            <span class="achv-tag">Visualization</span>
+                            <span class="achv-tag">Matplotlib</span>
+                            <span class="achv-tag">Seaborn</span>
+                            <p class="achv-desc">Thành thạo biểu đồ và trực quan hóa dữ liệu.</p>
+                            <a href="https://www.kaggle.com/learn/certification/gottagotellperiod/data-visualization" target="_blank">Xem chứng chỉ</a>
+                        </div>
 
-                    <section class="block">
-                        <h5>Chứng chỉ hoàn thành khóa <b>Intro to Machine Learning</b> - <b>Kaggle Learn</b></h5>
-                        <ul>
-                            <li><p>Khóa học hướng dẫn xây dựng những mô hình Machine Learning cơ bản</p></li>
-                            <li><p>Chuỗi khóa học hướng dẫn xây dựng và mở rộng các mô hình Machine Learning cơ bản đến nâng cao, bao gồm tiền xử lí dữ liệu, chọn mô hình và đánh giá hiệu suất.</p></li>
-                        </ul>
-                        <p>Link: <a href="https://www.kaggle.com/learn/certification/gottagotellperiod/intro-to-machine-learning">Xem chứng chỉ</a></p>
+                        <!-- Achv 4 -->
+                        <div class="achv-card">
+                            <div class="achv-title">Intro to SQL – Kaggle Learn</div>
+                            <span class="achv-tag">SQL</span>
+                            <span class="achv-tag">Database</span>
+                            <p class="achv-desc">Nắm các câu lệnh SQL cơ bản và thao tác dữ liệu trên DB thực tế.</p>
+                            <a href="https://www.kaggle.com/learn/certification/gottagotellperiod/intro-to-sql" target="_blank">Xem chứng chỉ</a>
+                        </div>
+
+                        <!-- Achv 5 -->
+                        <div class="achv-card">
+                            <div class="achv-title">Intro to Machine Learning – Kaggle Learn</div>
+                            <span class="achv-tag">Machine Learning</span>
+                            <span class="achv-tag">Scikit-Learn</span>
+                            <p class="achv-desc">Hiểu và triển khai các mô hình ML cơ bản.</p>
+                            <a href="https://www.kaggle.com/learn/certification/gottagotellperiod/intro-to-machine-learning" target="_blank">Xem chứng chỉ</a>
+                        </div>
                     </section>
 
                 </main>

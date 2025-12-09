@@ -1,190 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="portfolio, Hoàng, Kaggle, GitHub, Machine Learning, Data Analyst">
-    <title>Document</title>
+    <meta name="keywords" content="portfolio, contact, Hoàng, Data, GitHub, Kaggle">
+    <title>Liên hệ – Portfolio</title>
+
     <link rel="shortcut icon" href="../icon/portfolio.png" type="image/x-icon">
     <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
+
     <script src="../lib/js/bootstrap.bundle.js"></script>
     <script src="../scripts/change_theme.js"></script>
 
     <style>
+        body.dark-mode {
+            background-color: #222 !important;
+            color: #ddd;
+        }
 
+        body.dark-mode .bg-white {
+            background-color: #2f2f2f !important;
+            color: #ddd;
+        }
+
+        body.dark-mode input,
+        body.dark-mode textarea {
+            background-color: #3a3a3a !important;
+            color: white;
+            border: 1px solid #777;
+        }
+
+        body.dark-mode .offcanvas {
+            background-color: #333 !important;
+            color: #eee;
+        }
     </style>
 </head>
 
 <body class="bg-light">
+
     <div class="container-fluid">
         <div class="row">
-            <div class="col-4 p-3 bg-white border-end">
-                <div class="text-center" style="margin:20px;">
-                    <img src="../icon/user.png" class="img-fluid w-75" alt="User icon">
+
+            <!-- Sidebar trái -->
+            <aside class="col-4 p-3 bg-white border-end">
+                <div class="text-center mb-4">
+                    <img src="../icon/user.png" class="img-fluid w-75" alt="User">
                 </div>
 
-                <!-- Thông tin cá nhân -->
-                <h1>Thông tin cá nhân</h1>
+                <h2>Thông tin cá nhân</h2>
+
                 <table class="table table-borderless">
                     <tr>
                         <td>Họ và tên</td>
                         <td><strong>Bùi Thanh Hoàng</strong></td>
                     </tr>
-
                     <tr>
                         <td>Vai trò</td>
-                        <td><strong>Data Enthusiast</strong> - Yêu thích dữ liệu, đang học và thực hành</td>
+                        <td><strong>Data Enthusiast</strong></td>
                     </tr>
-
                     <tr>
                         <td>Email</td>
-                        <td class="text-break">
-                            <a href="mailto:bui.thanh.hoang.13112004@gmail.com">bui.thanh.hoang.13112004@gmail.com</a>
-                        </td>
+                        <td><a href="mailto:bui.thanh.hoang.13112004@gmail.com">Gmail</a></td>
                     </tr>
-                        
                     <tr>
                         <td>Outlook</td>
-                        <td class="text-break">
-                            <a href="mailto:bui.thanh.hoang.13112004@outlook.com">bui.thanh.hoang.13112004@outlook.com</a>
-                        </td>
+                        <td><a href="mailto:bui.thanh.hoang.13112004@outlook.com">Outlook</a></td>
                     </tr>
-                    
                     <tr>
                         <td>Github</td>
                         <td><a href="https://github.com/Thomas131104">Thomas131104</a></td>
                     </tr>
-                    
                     <tr>
                         <td>Kaggle</td>
                         <td><a href="https://www.kaggle.com/gottagotellperiod">Kaggle Profile</a></td>
                     </tr>
                 </table>
 
-
-                <!-- Các icon -->
-                <div class="d-flex flex-wrap justify-content-center gap-5">
-                    <a href="#" onclick="changeTheme(); return false" data-bs-toggle="tooltip" data-bs-placement="top" title="Đổi theme">
-                        <img src="../icon/change-theme.png" class="img-fluid" style="max-width: 32px;" alt="Change Theme">
+                <!-- Icon liên hệ -->
+                <div class="d-flex flex-wrap justify-content-center gap-4 mt-3">
+                    <a href="#" onclick="changeTheme(); return false" title="Đổi theme">
+                        <img src="../icon/change-theme.png" style="width:32px;">
                     </a>
-
-                    <a href="mailto:bui.thanh.hoang.13112004@gmail.com">
-                        <img src="../icon/gmail.png" class="img-fluid" style="max-width: 32px;" alt="Gmail" data-bs-toggle="tooltip" data-bs-placement="top" title="Gửi mail qua Gmail">
+                    <a href="mailto:bui.thanh.hoang.13112004@gmail.com" title="Gmail">
+                        <img src="../icon/gmail.png" style="width:32px;">
                     </a>
-
-                    <a href="mailto:bui.thanh.hoang.13112004@outlook.com">
-                        <img src="../icon/outlook.png" class="img-fluid" style="max-width: 32px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Gửi mail qua Outlook">
+                    <a href="mailto:bui.thanh.hoang.13112004@outlook.com" title="Outlook">
+                        <img src="../icon/outlook.png" style="width:32px;">
                     </a>
-
-                    <a href="https://github.com/Thomas131104">
-                        <img src="../icon/github.png" class="img-fluid" style="max-width: 32px;" alt="GitHub" data-bs-toggle="tooltip" data-bs-placement="top" title="Github của tôi">
+                    <a href="https://github.com/Thomas131104" title="GitHub">
+                        <img src="../icon/github.png" style="width:32px;">
                     </a>
-
-                    <a href="https://www.kaggle.com/gottagotellperiod">
-                        <img src="../icon/kaggle.png" class="img-fluid" style="max-width: 32px;" alt="Kaggle" data-bs-toggle="tooltip" data-bs-placement="top" title="Kaggle của tôi">
+                    <a href="https://www.kaggle.com/gottagotellperiod" title="Kaggle">
+                        <img src="../icon/kaggle.png" style="width:32px;">
                     </a>
-
-                    <a href="https://open.spotify.com/user/31vilqqn6fh566yto2bjimtswedu">
-                        <img src="../icon/spotify.png" class="img-fluid" style="max-width: 32px;" alt="Spotify" data-bs-toggle="tooltip" data-bs-placement="top" title="Spotify của tôi">
+                    <a href="https://open.spotify.com/user/31vilqqn6fh566yto2bjimtswedu" title="Spotify">
+                        <img src="../icon/spotify.png" style="width:32px;">
                     </a>
                 </div>
-            </div>
+            </aside>
 
+            <!-- Main content -->
+            <main class="col-8 p-4">
 
-            <div class="col-8 p-4">
-                <header class="mb-4">
+                <header class="d-flex justify-content-between">
                     <h1 class="text-primary">Liên hệ</h1>
+
+                    <!-- Nút menu DevFolio -->
+                    <button class="btn btn-outline-secondary" data-bs-toggle="offcanvas" data-bs-target="#menuSidebar">
+                        <img src="../icon/menu.png" style="width:24px;">
+                    </button>
                 </header>
 
-                <main>
-                    <div class="menu-button-wrapper text-end">
-                        <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuSidebar" aria-controls="menuSidebar" title="Menu">
-                            <img src="../icon/menu.png" style="width: 80%; height: 24px; border: 2px; background-color: bisque;">
-                        </button>
+                <!-- Sidebar menu -->
+                <div class="offcanvas offcanvas-end" id="menuSidebar">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button class="btn-close" data-bs-dismiss="offcanvas"></button>
                     </div>
 
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="menuSidebar" aria-labelledby="menuSidebarLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="menuSidebarLabel">Menu</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Đóng"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="nav nav-pills flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../index.html">Giới thiệu</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="achivement.html">Thành tích & Học vấn</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="project.html">Dự án</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="playlist.html">Playlist âm nhạc</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active disabled" aria-disabled="true">Liên hệ</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="offcanvas-body">
+                        <ul class="nav flex-column nav-pills">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Giới thiệu</a></li>
+                            <li class="nav-item"><a class="nav-link" href="achivement.html">Thành tích & Học vấn</a></li>
+                            <li class="nav-item"><a class="nav-link" href="project.html">Dự án</a></li>
+                            <li class="nav-item"><a class="nav-link" href="playlist.html">Playlist âm nhạc</a></li>
+                            <li class="nav-item"><a class="nav-link active disabled">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Form liên hệ -->
+                <form class="p-4 border rounded shadow-sm bg-white mt-3" id="contactForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Tên của bạn</label>
+                        <input id="name" name="name" type="text" class="form-control" required>
                     </div>
 
-
-                    <!-- Nội dung chính -->
-                    <form method="POST" class="p-3 border rounded shadow-sm bg-light" id="contactForm">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Tên của bạn</label>
-                            <input id="name" name="name" type="text" class="form-control" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email của bạn</label>
-                            <input id="email" name="email" type="email" class="form-control" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="content" class="form-label">Thư của bạn</label>
-                            <textarea id="content" name="content" class="form-control" rows="15" required></textarea>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label d-block">Phương thức gửi</label>
-                            <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="send_method" id="gmail" value="gmail" checked>
-                            <label class="form-check-label" for="gmail">Gmail</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="send_method" id="outlook" value="outlook">
-                            <label class="form-check-label" for="outlook">Outlook</label>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary w-100">Gửi</button>
-                    </form>
-
-                    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                        <div id="toast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
-                            <div class="d-flex">
-                                <div class="toast-body" id="toast-body">
-                                    Thành công!
-                                </div>
-                                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
-                            </div>
-                        </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email của bạn</label>
+                        <input id="email" name="email" type="email" class="form-control" required>
                     </div>
 
+                    <div class="mb-3">
+                        <label for="content" class="form-label">Nội dung thư</label>
+                        <textarea id="content" name="content" class="form-control" rows="10" required></textarea>
+                    </div>
 
-                </main>
+                    <div class="mb-3">
+                        <label class="form-label d-block">Phương thức gửi</label>
 
-                <footer class="text-muted mt-5">
+                        <label class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="method" value="gmail" checked>
+                            Gmail
+                        </label>
+
+                        <label class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="method" value="outlook">
+                            Outlook
+                        </label>
+                    </div>
+
+                    <button class="btn btn-primary w-100">Gửi</button>
+                </form>
+
+                <!-- Toast -->
+                <div class="position-fixed bottom-0 end-0 p-3">
+                    <div id="toast" class="toast text-bg-success">
+                        <div class="d-flex">
+                            <div class="toast-body" id="toast-body">Thành công!</div>
+                            <button class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="text-muted mt-4">
                     <hr>
                     <p>By Mus aka Hoàng Bùi</p>
                 </footer>
-            </div>
+            </main>
         </div>
     </div>
 
     <script src="../scripts/send_email.js"></script>
 </body>
+
 </html>
